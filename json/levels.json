@@ -1,0 +1,12 @@
+[
+    {
+        "mainImage": "img/background.jpg",
+        "compareImage": "img/layer.jpg",
+        "colors": "b4875d,5d3f25,1f060c,2a070d"
+    },
+    {
+        "mainImage": "img/level2back.jpg",
+        "compareImage": "img/level2compare.jpg",
+        "colors": "fefdfb,dbdd9b,b6a04b,484a25"
+    }
+]

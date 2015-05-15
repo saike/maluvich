@@ -1,0 +1,62 @@
+@import (reference) "generic";
+@import (reference) "colors";
+
+.btn_big {
+  border:none;
+  padding: 20px 30px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  vertical-align: top;
+  .rounded-corners(8px);
+  font-family: inherit;
+
+}
+
+.btn_small {
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  vertical-align: top;
+  .rounded-corners(4px);
+  font-family: inherit;
+}
+
+.color_btn(@bg_color, @color, @border_size){
+  background-color: @bg_color;
+  color: @color;
+  .box-shadow(0 @border_size 0 darken(@bg_color, 10%));
+//  border-bottom: @border_size solid darken(@bg_color, 10%);
+  &:hover {
+    .transform(translate(0,@border_size/2));
+    .box-shadow(0 @border_size/2 0 darken(@bg_color, 10%));
+//    border-bottom: @border_size/2 solid darken(@bg_color, 10%);
+  }
+}
+
+
+
+.btn_big.green, .btn_small.green {
+  .color_btn(@green, @white, 2px);
+}
+.btn_big.l_blue, .btn_small.l_blue {
+  .color_btn(@light_blue, @white, 2px);
+}
+.btn_big.orange, .btn_small.orange {
+  .color_btn(@orange, @white, 2px);
+}
+.btn_big.yellow, .btn_small.yellow {
+  .color_btn(@yellow, @white, 2px);
+}
+
+.btn_big.red, .btn_small.red {
+  .color_btn(@red, @white, 2px);
+}

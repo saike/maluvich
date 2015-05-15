@@ -1,0 +1,319 @@
+#level_selector {
+    width: 100%;
+
+}
+
+body {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#background_image, #paint_image {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#compare_image {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#score {
+
+
+    position: absolute;
+    top: 580px;
+    left: 16px;
+    height: 40px;
+    width: 375px;
+    background-color: lightcyan;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: "Lucida Grande";
+    text-align: center;
+}
+
+#scoreBar {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: greenyellow;
+    z-index: 100;
+}
+
+#procentsBar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 900;
+
+}
+
+#specialBtn {
+
+    position: absolute;
+    top: 520px;
+    height: 40px;
+    left: 16px;
+    width: 60px;
+    background-color: deeppink;
+    border-radius: 8px;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: "Lucida Grande";
+    text-align: center;
+
+}
+
+#specialBtn:hover {
+
+    background-color: plum;
+
+}
+
+#menuBtn {
+
+    position: absolute;
+    background-color: darkcyan;
+    border-radius: 8px;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: "Lucida Grande";
+    text-align: center;
+
+}
+
+#menuBtn:hover {
+
+   background-color: cadetblue;
+
+}
+
+#palette {
+
+    position: absolute;
+    top: 520px;
+    left: 100px;
+    height: 40px;
+    width: 200px;
+
+}
+
+@media screen and (min-width: 651px) {
+
+    .paintColor {
+
+        width: 23%;
+        height: 100%;
+        margin-right: 2%;
+        float: left;
+        cursor: pointer;
+        border-radius: 4px;
+
+    }
+
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .paintColor {
+
+        width: 45%;
+        margin-right: 5%;
+        height: 100%;
+        margin-bottom: 3%;
+        float: left;
+        cursor: pointer;
+        border-radius: 4px;
+
+    }
+
+}
+
+.paintColor:hover {
+
+    box-shadow: 0 0 10px rgba(0,0,0,1)
+
+}
+
+.selectedColor {
+
+    box-shadow: 0 0 10px rgba(0,0,0,1)
+
+}
+
+#start_button {
+
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    width: 200px;
+    background-color: darkgrey;
+    opacity: 0.8;
+    border-radius: 8px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 32px;
+    font-family: "Lucida Grande";
+    cursor: pointer;
+
+}
+
+#start_button:hover {
+
+    background-color: dimgray;
+
+}
+
+#paint_wrapper {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 600px;
+    background-color: transparent;
+
+}
+
+#timer {
+
+    position: absolute;
+    text-align: center;
+    top: 530px;
+    left: 330px;
+    height: 40px;
+
+}
+
+#levelSelectScreen {
+
+    background-color: rgba(255,255,255,0.9);
+    z-index: 2000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.levelBtn {
+
+    width: 44%;
+    margin-left: 4%;
+    position: relative;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.levelBtn:hover {
+
+    opacity: 0.8;
+
+}
+
+#menuScreen {
+
+    background-color: rgba(255,255,255,0.9);
+    z-index: 1000;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#restartBtn {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    height: 15%;
+    background-color: greenyellow;
+    border-radius: 16px;
+    top: 15%;
+    cursor: pointer;
+    font-size: 200%;
+    font-family: "Lucida Grande";
+    border: none;
+
+}
+
+#restartBtn:hover {
+
+    background-color: darkgreen;
+
+}
+
+
+#levelSelectMenuBtn {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 35%;
+    margin-left: -100px;
+    height: 15%;
+    line-height: 100px;
+    background-color: cornflowerblue;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 200%;
+    font-family: "Lucida Grande";
+    border: none;
+}
+
+#levelSelectMenuBtn:hover {
+
+    background-color: cadetblue;
+
+}
+
+#exitMenu {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 55%;
+    margin-left: -100px;
+    height: 15%;
+    line-height: 100px;
+    background-color: chocolate;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 200%;
+    font-family: "Lucida Grande";
+    border: none;
+
+}
+
+#exitMenu:hover {
+
+    background-color: coral;
+
+}
+

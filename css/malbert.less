@@ -1,0 +1,200 @@
+@import (reference) "colors";
+@import (reference) "generic";
+
+.malbert {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  .box-sizing(border-box);
+  //painting desk
+  .desk {
+    position: absolute;
+    display: inline-block;
+    width: 96%;
+    height: 100%;
+    left: 2%;
+    min-height: 450px;
+    background-image: url('/social/img/lib/malbert_deck_vector.jpg');
+    background-size: 100%;
+    background-position: top left;
+    .box-shadow(0px 0px 0px 14px rgba(50,50,50,1));
+    .top_tools {
+      position: absolute;
+      display: inline-block;
+      top: 2%;
+      left: 0;
+      height: 6%;
+      width: 100%;
+      .timer {
+
+        position: absolute;
+        display: inline-block;
+        line-height: 20px;
+        font-size: 20px;
+        vertical-align: top;
+        text-align: center;
+        width: 30%;
+        left: 70%;
+        height: 20px;
+        top: 50%;
+        margin-top: -10px;
+      }
+    }
+    .score {
+      width: 70%;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+//      background-color: @light_grey;
+      vertical-align: top;
+      background: rgb(242,246,248); /* Old browsers */
+      background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,246,248,1)), color-stop(50%,rgba(216,225,231,1)), color-stop(51%,rgba(181,198,208,1)), color-stop(100%,rgba(224,239,249,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+      z-index: 1;
+      .procents_bar {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        color: @grey;
+        text-align: center;
+        line-height: 20px;
+        font-size: 20px;
+        z-index: 3;
+      }
+      .score_bar {
+        background: rgb(191,210,85); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(191,210,85,1) 0%, rgba(142,185,42,1) 50%, rgba(114,170,0,1) 51%, rgba(158,203,45,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(191,210,85,1)), color-stop(50%,rgba(142,185,42,1)), color-stop(51%,rgba(114,170,0,1)), color-stop(100%,rgba(158,203,45,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+    }
+    .canvas {
+      width: 100%;
+      position: absolute;
+      top: 10%;
+      height: 70%;
+      .drawing_wrapper {
+        position: absolute;
+//        .paper {
+//          position: absolute;
+//          z-index: 0;
+//          width: 106%;
+//          height: 106%;
+//          top: -3%;
+//          left: -3%;
+//        }
+      }
+      img {
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .paint_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: crosshair;
+        z-index: 2;
+      }
+      .compare_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+      }
+    }
+
+  }
+
+  //desk tools
+  .tools {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    top: 82%;
+    height: 18%;
+    .rounded-corners(3px 3px 0 0);
+    .tools_block {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+
+    .palette {
+      top: 0;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      .palette_color {
+        width: 60px;
+        height: 60px;
+        margin: 6px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        .rounded-corners(30px);
+        background-image: url('/social/img/lib/paint_can_1.png');
+        background-size: 60px 60px;
+        background-position: top left;
+        .box-shadow(2px 2px 2px 1px rgba(0,0,0,0.75));
+        .transition(0.1s linear);
+        &.selected, &:hover {
+          .transition(0.1s linear);
+          .transform(scale(1.1));
+          .box-shadow(3px 3px 2px 1px rgba(0,0,0,0.75));
+        }
+      }
+    }
+
+
+  }
+
+  .malbert_overlay {
+    border: none;
+    border-spacing: 0;
+    td {
+      vertical-align: middle;
+      text-align: center;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    background-image: url('/social/img/lib/overlay.png');
+    background-size: 100% 100%;
+    background-position: top left;
+  }
+
+
+
+}
+

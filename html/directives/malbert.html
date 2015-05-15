@@ -1,0 +1,69 @@
+<div class="malbert">
+
+  <table class="malbert_overlay" data-ng-show="gameState() == 'pregame'">
+    <tr>
+      <td>
+        <button type="button" class="btn_big l_blue" data-ng-click="startGame()">START</button>
+      </td>
+    </tr>
+  </table>
+
+  <table class="malbert_overlay" data-ng-show="gameState() == 'menu'">
+    <tr>
+      <td>
+        <button type="button"  class="btn_big yellow" style="width: 250px;" data-ng-click="setState('paint')">RETURN</button>
+        <br/>
+        <br/>
+        <button type="button" class="btn_big l_blue" style="width: 250px;" data-ng-click="restartGame()">RESTART</button>
+        <br/>
+        <br/>
+        <button type="button"  class="btn_big green" style="width: 250px;" data-ng-click="goToGallery()">GALLERY</button>
+        <br/>
+        <br/>
+        <button type="button"  class="btn_big red" style="width: 250px;" data-ng-click="goToMain()">QUIT</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="desk">
+
+    <div class="top_tools">
+      <div class="score">
+        <div class="score_bar" data-ng-style="{ width: getCompleteness() + '%' }"></div>
+        <div class="procents_bar" data-ng-bind="getCompleteness() + '%'"></div>
+      </div>
+
+      <div class="timer">
+        [[ getTimer() | to_fixed:1 ]]s
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="drawing_wrapper">
+        <!--<img class="paper" src="/social/img/lib/drawing_paper.png"/>-->
+        <img class="background_image" data-ng-src="[[ level.main_image ]]" alt="[[ level.name ]]"/>
+        <!--<canvas class="background_image"></canvas>-->
+        <canvas class="paint_image"></canvas>
+        <canvas data-ng-show="is_show_special" class="compare_image"></canvas>
+      </div>
+    </div>
+
+    <div class="tools">
+
+      <div class="tools_block">
+        <div class="palette">
+          <div class="palette_color" data-ng-repeat="color in currentLevel().colors" data-ng-style="{ backgroundColor: color }" data-ng-class="{ selected: (getColor() == color) }" data-ng-click="setColor(color)"></div>
+        </div>
+      </div>
+
+
+      <div class="tools_block" style="margin: 6px 0;">
+        <button type="button" class="btn_small orange">[[ specials() ]]</button>
+        <button type="button" class="btn_small yellow" data-ng-click="setState('menu')">PAUSE</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

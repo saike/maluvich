@@ -1,0 +1,14 @@
+<h3 style="margin-top: 40px;">Let's draw!</h3>
+<div class="profile" data-ng-show="user">
+  <table>
+    <tr>
+      <td style="width: 120px;">
+        <img class="profile_pic" data-ng-src="[[ user.picture.data.url ]]" width="120" height="120" alt=""/>
+      </td>
+      <td>
+        <div>[[ user.name ]]</div>
+      </td>
+    </tr>
+  </table>
+</div>
+<button style="margin-top: 50px;" type="button" class="btn_big green" data-ng-click="start()">НАЧАТЬ</button>

@@ -1,0 +1,24 @@
+<ul class="levels_list">
+  <li data-ng-repeat="level in levels" class="level">
+    <table>
+      <tr>
+        <td style="width: 30%; vertical-align: top;" rowspan="2">
+          <img data-ng-src="[[ level.main_image ]]" alt="[[ level.name ]]"/>
+        </td>
+        <td style="vertical-align: top;">
+          <div class="text_left">
+            <h3 class="level_name" data-ng-bind="level.name"></h3>
+            <p style="margin: 0;">
+              Здесь когда-нибудь будет инфа о картинке, а так же всякие социальные штуки
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="1" style="height: 40px; vertical-align: bottom;" class="text_left">
+          <button type="button" class="btn_small green" data-ng-click="start_game(level)">НАРИСОВАТЬ</button>
+        </td>
+      </tr>
+    </table>
+  </li>
+</ul>

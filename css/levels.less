@@ -1,0 +1,44 @@
+@import (reference) "colors";
+@import (reference) "generic";
+
+.levels_list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  .level {
+    display: block;
+    background-color: rgba(100,100,100,0.1);
+
+//    border-bottom: 1px solid @grey;
+//    .rounded-corners(8px);
+    margin: 6px 8px;
+//    background-image: url(/social/img/lib/back_3.jpg);
+    background-size: 100% 100%;
+    background-position: top left;
+    table {
+      width: 100%;
+      td {
+        vertical-align: middle;
+        padding: 8px;
+      }
+    }
+//    .level_tools {
+//      margin-top: 12px;
+//    }
+    img {
+      width: 100%;
+    }
+    .level_name {
+      display: inline-block;
+      font-weight: bold;
+      text-align: left;
+      font-size: 18px;
+      color: @grey;
+      vertical-align: middle;
+      margin: 0 0 10px 0;
+    }
+  }
+
+}
